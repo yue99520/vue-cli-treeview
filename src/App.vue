@@ -1,28 +1,367 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <div id="app">
+        <TreeView
+            :items="items"
+        >
+        </TreeView>
+        <button v-on:click="onButtonClick">改變資料</button>
+    </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
+
+import TreeView from "@/components/TreeView";
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+    name: 'App',
+    components: {
+        TreeView
+    },
+    data: function () {
+        return {
+            items: [
+                {
+                    value: "something",
+                    text: "some text",
+                    items: []
+                },
+                {
+                    value: "something",
+                    text: "some text",
+                    items: [
+                        {
+                            value: "something",
+                            text: "some text",
+                            items: [
+                                {
+                                    value: "something",
+                                    text: "some text",
+                                    items: [
+
+                                    ]
+                                },
+                                {
+                                    value: "something",
+                                    text: "some text",
+                                    items: [
+
+                                    ]
+                                },
+                                {
+                                    value: "something",
+                                    text: "some text",
+                                    items: [
+
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            value: "something",
+                            text: "some text",
+                            items: [
+
+                            ]
+                        },
+                        {
+                            value: "something",
+                            text: "some text",
+                            items: [
+
+                            ]
+                        },
+                        {
+                            value: "something",
+                            text: "some text",
+                            items: [
+
+                            ]
+                        }
+                    ]
+                },
+                {
+                    value: "something",
+                    text: "some text",
+                    items: [
+                        {
+                            value: "something",
+                            text: "some text",
+                            items: [
+                                {
+                                    value: "something",
+                                    text: "some text",
+                                    items: [
+
+                                    ]
+                                },
+                                {
+                                    value: "something",
+                                    text: "some text",
+                                    items: [
+
+                                    ]
+                                },
+                                {
+                                    value: "something",
+                                    text: "some text",
+                                    items: [
+
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            value: "something",
+                            text: "some text",
+                            items: [
+
+                            ]
+                        },
+                        {
+                            value: "something",
+                            text: "some text",
+                            items: [
+
+                            ]
+                        },
+                        {
+                            value: "something",
+                            text: "some text",
+                            items: [
+
+                            ]
+                        }
+                    ]
+                },
+                {
+                    value: "something",
+                    text: "some text",
+                    items: [
+                        {
+                            value: "something",
+                            text: "some text",
+                            items: [
+                                {
+                                    value: "something",
+                                    text: "some text",
+                                    items: [
+
+                                    ]
+                                },
+                                {
+                                    value: "something",
+                                    text: "some text",
+                                    items: [
+
+                                    ]
+                                },
+                                {
+                                    value: "something",
+                                    text: "some text",
+                                    items: [
+
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            value: "something",
+                            text: "some text",
+                            items: [
+
+                            ]
+                        },
+                        {
+                            value: "something",
+                            text: "some text",
+                            items: [
+
+                            ]
+                        },
+                        {
+                            value: "something",
+                            text: "some text",
+                            items: [
+
+                            ]
+                        }
+                    ]
+                },
+                {
+                    value: "something",
+                    text: "some text",
+                    items: [
+                        {
+                            value: "something",
+                            text: "some text",
+                            items: [
+                                {
+                                    value: "something",
+                                    text: "some text",
+                                    items: [
+
+                                    ]
+                                },
+                                {
+                                    value: "something",
+                                    text: "some text",
+                                    items: [
+
+                                    ]
+                                },
+                                {
+                                    value: "something",
+                                    text: "some text",
+                                    items: [
+
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            value: "something",
+                            text: "some text",
+                            items: [
+
+                            ]
+                        },
+                        {
+                            value: "something",
+                            text: "some text",
+                            items: [
+
+                            ]
+                        },
+                        {
+                            value: "something",
+                            text: "some text",
+                            items: [
+
+                            ]
+                        }
+                    ]
+                },
+                {
+                    value: "something",
+                    text: "some text",
+                    items: [
+                        {
+                            value: "something",
+                            text: "some text",
+                            items: [
+                                {
+                                    value: "something",
+                                    text: "some text",
+                                    items: [
+
+                                    ]
+                                },
+                                {
+                                    value: "something",
+                                    text: "some text",
+                                    items: [
+
+                                    ]
+                                },
+                                {
+                                    value: "something",
+                                    text: "some text",
+                                    items: [
+
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            value: "something",
+                            text: "some text",
+                            items: [
+
+                            ]
+                        },
+                        {
+                            value: "something",
+                            text: "some text",
+                            items: [
+
+                            ]
+                        },
+                        {
+                            value: "something",
+                            text: "some text",
+                            items: [
+
+                            ]
+                        }
+                    ]
+                },
+            ],
+            temp: true,
+        }
+    },
+    methods: {
+        onButtonClick() {
+            let pend = [
+                {
+                    value: "something",
+                    text: "some text",
+                    items: [
+                        {
+                            value: "something",
+                            text: "some text",
+                            items: [
+
+                            ]
+                        },
+                        {
+                            value: "something",
+                            text: "some text",
+                            items: [
+
+                            ]
+                        },
+                        {
+                            value: "something",
+                            text: "some text",
+                            items: [
+
+                            ]
+                        }
+                    ]
+                },
+                {
+                    value: "something",
+                    text: "some text",
+                    items: [
+
+                    ]
+                },
+                {
+                    value: "something",
+                    text: "some text",
+                    items: [
+
+                    ]
+                },
+                {
+                    value: "something",
+                    text: "some text",
+                    items: [
+
+                    ]
+                }
+            ];
+            if (this.temp) {
+                this.items[0].items = pend;
+            } else {
+                this.items[0].items = [];
+            }
+            this.temp = !this.temp;
+        }
+    }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
